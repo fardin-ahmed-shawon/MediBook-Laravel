@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('doctors_specialized_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name', 150);
-            $table->string('phone', 20)->unique();
-            $table->string('email', 150)->unique()->nullable();
-            $table->string('password_hashed', 255);
-            $table->enum('user_type', ['patient', 'doctor', 'admin'])->default('patient');
+            $table->string('name', 100)->unique();
             $table->timestamp('created_at')->useCurrent();
         });
     }
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('doctors_specialized_categories');
     }
 };

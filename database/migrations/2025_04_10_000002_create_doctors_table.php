@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('doctors', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name', 150);
-            $table->string('phone', 20)->unique();
-            $table->string('email', 150)->unique()->nullable();
-            $table->string('password_hashed', 255);
-            $table->enum('user_type', ['patient', 'doctor', 'admin'])->default('patient');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('specialized_area')->nullable()->constrained('doctors_specialized_categories')->onDelete('setNull');
+            $table->integer('years_of_experience')->default(0);
             $table->timestamp('created_at')->useCurrent();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('doctors');
     }
 };
