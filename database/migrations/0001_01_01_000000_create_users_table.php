@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email', 150)->unique()->nullable();
             $table->string('password_hashed', 255);
             $table->enum('user_type', ['patient', 'doctor', 'admin'])->default('patient');
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

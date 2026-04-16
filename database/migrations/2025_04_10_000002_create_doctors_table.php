@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('specialized_area')->nullable()->constrained('doctors_specialized_categories')->onDelete('setNull');
+            $table->foreignId('specialized_area')->nullable()->constrained('doctors_specialized_categories')->onDelete('set null');
             $table->integer('years_of_experience')->default(0);
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
         });
     }
 
