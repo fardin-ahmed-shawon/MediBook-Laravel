@@ -17,7 +17,6 @@ class Doctor extends Model
         'years_of_experience',
     ];
 
-    public $timestamps = false;
 
     /**
      * Get the user associated with this doctor.
