@@ -1,102 +1,123 @@
 <template>
-  <div class="relative overflow-hidden bg-white">
-    <!-- Decorative background elements -->
-    <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
-      <div class="relative h-full max-w-7xl mx-auto">
-        <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
-          <defs>
-            <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="4" height="4" class="text-gray-50" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
-        </svg>
+  <div>
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-72 h-72 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/3 translate-y-1/3"></div>
       </div>
-    </div>
-
-    <div class="relative pt-10 pb-16 sm:pt-16 sm:pb-24 lg:pb-32">
-      <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
-        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-          <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold text-blue-600 bg-blue-50 tracking-wide uppercase mb-4 animate-fade-in-up">
-              Beta Release Available
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+          <div class="lg:col-span-7 text-center lg:text-left">
+            <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white tracking-wide uppercase mb-6 backdrop-blur-sm">
+              ✦ Trusted by thousands
             </div>
-            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl animate-fade-in-up delay-100">
-              <span class="block">Find the right doctor,</span>
-              <span class="block text-blue-600 xl:inline">book instantly.</span>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Find the right doctor,
+              <span class="block text-blue-200 mt-2">book instantly.</span>
             </h1>
-            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 animate-fade-in-up delay-200">
-              Your health journey made simple. Browse top specialists, view real-time availability, and secure your appointment in seconds without phone calls or waiting rooms.
+            <p class="mt-6 text-lg text-blue-100 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Your health journey made simple. Browse top specialists, view real-time availability, and secure your appointment in seconds.
             </p>
-            <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0 animate-fade-in-up delay-300">
-              <div class="flex flex-col sm:flex-row gap-3">
-                <button type="button" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition lg:justify-start">
-                  Book an Appointment
-                </button>
-                <button type="button" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition lg:justify-start">
-                  Register as Doctor
-                </button>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <router-link to="/doctors" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-blue-700 bg-white hover:bg-blue-50 shadow-lg shadow-blue-900/20 transition-all hover:-translate-y-0.5">
+                Find a Doctor
+              </router-link>
+              <router-link to="/register" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-white border-2 border-white/30 hover:bg-white/10 transition-all">
+                Register as Doctor
+              </router-link>
+            </div>
+          </div>
+          
+          <!-- Stats Cards -->
+          <div class="hidden lg:flex lg:col-span-5 items-center">
+            <div class="grid grid-cols-2 gap-4 w-full">
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <div class="text-3xl font-bold text-white">50+</div>
+                <div class="text-blue-200 text-sm mt-1">Verified Doctors</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <div class="text-3xl font-bold text-white">8</div>
+                <div class="text-blue-200 text-sm mt-1">Specializations</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <div class="text-3xl font-bold text-white">24/7</div>
+                <div class="text-blue-200 text-sm mt-1">Online Booking</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <div class="text-3xl font-bold text-white">1K+</div>
+                <div class="text-blue-200 text-sm mt-1">Happy Patients</div>
               </div>
             </div>
           </div>
-          <!-- Hero Graphic -->
-          <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center animate-fade-in-up delay-400">
-            <div class="relative mx-auto w-full rounded-2xl shadow-xl lg:max-w-md overflow-hidden bg-white">
-               <!-- Mockup of Doctor App -->
-               <div class="bg-blue-50 border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-                 <div>
-                    <h3 class="font-bold text-gray-900">Available Doctors</h3>
-                    <p class="text-sm text-gray-500">Cardiology</p>
-                 </div>
-                 <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-               </div>
-               <div class="p-6 space-y-4">
-                 <div class="flex items-center space-x-4 p-4 border border-gray-100 rounded-xl hover:shadow-md transition cursor-pointer" v-for="i in 3" :key="i">
-                   <div class="w-12 h-12 rounded-full bg-gray-200 relative overflow-hidden">
-                      <div class="absolute inset-0 bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
-                        Dr
-                      </div>
-                   </div>
-                   <div class="flex-1">
-                     <h4 class="text-sm font-semibold text-gray-900">Dr. Sarah Jenkins</h4>
-                     <p class="text-xs text-gray-500">10+ Years Experience</p>
-                   </div>
-                   <div class="text-blue-600 font-medium text-sm">
-                     Book
-                   </div>
-                 </div>
-               </div>
-            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specializations Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Browse by Specialization</h2>
+        <p class="mt-3 text-gray-500">Find the right specialist for your needs</p>
+      </div>
+      
+      <div v-if="specializations.length > 0" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <router-link 
+          v-for="spec in specializations" :key="spec.id"
+          :to="`/doctors?specialization=${spec.id}`"
+          class="bg-white border border-gray-200 rounded-xl p-5 text-center hover:shadow-md hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 group"
+        >
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+            <span class="text-blue-600 text-xl">🏥</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 text-sm">{{ spec.name }}</h3>
+        </router-link>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="bg-gray-50 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">How It Works</h2>
+          <p class="mt-3 text-gray-500">Get your appointment in 3 simple steps</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white text-2xl font-bold shadow-lg shadow-blue-600/30">1</div>
+            <h3 class="font-bold text-gray-900 text-lg mb-2">Search Doctor</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Browse our extensive list of verified doctors by specialization, location, or name.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white text-2xl font-bold shadow-lg shadow-blue-600/30">2</div>
+            <h3 class="font-bold text-gray-900 text-lg mb-2">Pick a Schedule</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Choose from available time slots that work for you. View chamber locations and fees upfront.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white text-2xl font-bold shadow-lg shadow-blue-600/30">3</div>
+            <h3 class="font-bold text-gray-900 text-lg mb-2">Confirm Booking</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Book instantly online. Get confirmation and manage your appointments from your dashboard.</p>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-// Homepage logic
+import { ref, onMounted } from 'vue';
+import api from '../api';
+
+const specializations = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await api.get('/specialists');
+    specializations.value = response.data.data || response.data;
+  } catch (e) {
+    // silently fail on home page
+  }
+});
 </script>
-
-<style>
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.5s ease-out forwards;
-  opacity: 0;
-}
-
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-</style>
